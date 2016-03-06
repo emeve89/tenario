@@ -3,6 +3,7 @@ Dir[Rails.root.join('lib/constraint/*').to_s].each do |constraint|
 end
 
 Rails.application.routes.draw do
+  resources :posts
   constraints Constraint::Slugged do
   end
   constraints Constraint::Main do
